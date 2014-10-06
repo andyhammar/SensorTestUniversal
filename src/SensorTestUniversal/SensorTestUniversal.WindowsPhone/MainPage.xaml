@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="SensorTestUniversal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SensorTestUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Center" Content="launch change" Click="LaunchChange_Click"/>
+        <Button x:Name="button" Grid.Column="1" HorizontalAlignment="Center" Content="launch timer" Click="LaunchTimer_Click"/>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock 
+                x:Name="textBlock" Margin="10" Text="text starts here:" FontSize="14"/>
+        </ScrollViewer>
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Content="launch web" VerticalAlignment="Bottom" Click="LaunchWeb_Click" Width="{Binding Width, ElementName=button}"/>
+    </Grid>
+</Page>
